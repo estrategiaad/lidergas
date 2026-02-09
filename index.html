@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17936826288"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17936826288');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Líder Gás Supergasbras | Gás em Brasília e Riacho Fundo - Entrega Rápida</title>
     <meta name="description" content="Peça seu gás de cozinha ou industrial da Líder Gás Supergasbras em Brasília, Riacho Fundo, Taguatinga e Águas Claras. Entrega rápida em até 1 hora.">
     <meta name="keywords" content="gás brasília, gás riacho fundo, gás taguatinga, gás águas claras, gás vicente pires, entrega de gás, supergasbras brasília, líder gás">
     
-    <!-- SEO: Canonical URL --><!-- Substitua pelo seu domínio final --><link rel="canonical" href="https://www.SEU_DOMINIO_AQUI.com.br">
+    <link rel="canonical" href="https://www.SEU_DOMINIO_AQUI.com.br">
 
-    <!-- SEO: Open Graph (para WhatsApp, Facebook, etc.) --><!-- Substitua pelo seu domínio final --><meta property="og:title" content="Líder Gás Supergasbras | Gás em Brasília e Riacho Fundo">
+    <!-- SEO: Open Graph -->
+    <meta property="og:title" content="Líder Gás Supergasbras | Gás em Brasília e Riacho Fundo">
     <meta property="og:description" content="Peça seu gás de cozinha ou industrial da Líder Gás Supergasbras em Brasília, Riacho Fundo, Taguatinga e Águas Claras. Entrega rápida.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.SEU_DOMINIO_AQUI.com.br">
-    <meta property="og:image" content="https://www.SEU_DOMINIO_AQUI.com.br/gas1.webp"> <!-- Imagem principal para compartilhamento --><meta property="og:locale" content="pt_BR">
-
-    <!-- SEO: Twitter Card --><!-- Substitua pelo seu domínio final --><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Líder Gás Supergasbras | Gás em Brasília e Riacho Fundo">
-    <meta name="twitter:description" content="Peça seu gás de cozinha ou industrial em Brasília e região. Entrega rápida.">
-    <meta name="twitter:image" content="https://www.SEU_DOMINIO_AQUI.com.br/gas1.webp">
+    <meta property="og:image" content="https://www.SEU_DOMINIO_AQUI.com.br/gas1.webp"> 
+    <meta property="og:locale" content="pt_BR">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -47,59 +54,60 @@
         .faq-item[open] .faq-arrow {
             transform: rotate(180deg);
         }
-        /* Remove o CSS antigo do slider */
-        .testimonial-slider {
-            /* Estilos antigos removidos */
-        }
-        .testimonial-slide {
-             /* Estilos antigos removidos */
-        }
 
         /* Estilos do Swiper */
-        .testimonial-slider.swiper-container { /* MUDANÇA: Seletor mais específico */
+        .testimonial-slider.swiper-container {
             width: 100%;
-            padding-bottom: 50px; /* Espaço para os pontos */
-            overflow: hidden; /* Corrige o vazamento de layout */
+            padding-bottom: 50px;
+            overflow: hidden;
         }
         .swiper-slide {
-            height: auto; /* Garante que os slides tenham a mesma altura */
+            height: auto;
             display: flex;
-        }
-        .swiper-pagination-bullet {
-            background: #ccc;
-            opacity: 1;
         }
         .swiper-pagination-bullet-active {
             background: #D33100;
         }
 
-        /* ADIÇÃO: Estilos do Swiper do Hero */
+        /* Estilos do Swiper do Hero */
         .hero-swiper-container {
             width: 100%;
             height: 100%;
         }
-        .hero-swiper-container .swiper-pagination {
-            bottom: 20px !important; /* Posição dentro da imagem */
-        }
-        .hero-swiper-container .swiper-pagination-bullet {
-            background: #ffffff;
-            opacity: 0.7;
-            width: 10px;
-            height: 10px;
-        }
         .hero-swiper-container .swiper-pagination-bullet-active {
             background: #D33100;
-            opacity: 1;
         }
 
-        @media (min-width: 768px) {
-             /* Remove o grid do CSS e deixa o Swiper controlar */
+        /* Inputs de quantidade customizados */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
         }
-        
-        /* CSS do Hero Image Slider removido */
+
+        /* Animação do Botão */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        .btn-loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Botões de Pagamento */
+        .payment-btn.active {
+            background-color: #fff7ed; /* orange-50 */
+            border-color: #D33100;
+            color: #D33100;
+            font-weight: 700;
+            box-shadow: 0 0 0 1px #D33100;
+        }
     </style>
 
-    <!-- SEO: JSON-LD Schema (Dados Estruturados) --><!-- Substitua pelo seu domínio final e confirme os horários --><script type="application/ld+json">
+    <!-- SEO: JSON-LD Schema --><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -123,24 +131,26 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- 0. Navigation Bar --><header class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
+    <!-- 0. Navegação -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="#" class="flex items-center text-xl font-bold text-gray-900">
-                        <!-- Logotipo adicionado --><img src="logo.webp" alt="Logotipo Líder Gás" class="h-10 w-auto mr-2" onerror="this.onerror=null;this.src='https://placehold.co/100x40/0D3B66/FFFFFF?text=Logo';">
-                        <!-- Texto original --><!-- MUDANÇA: Adicionada margem (mx-1) ao hífen para dar espaço -->Líder Gás <span class="text-[#D33100] mx-1">-</span> <span class="font-light text-[#D33100]">Supergasbras</span>
+                        <img src="logo.webp" alt="Logotipo Líder Gás" class="h-10 w-auto mr-2" onerror="this.onerror=null;this.src='https://placehold.co/100x40/0D3B66/FFFFFF?text=Logo';">
+                        Líder Gás <span class="text-[#D33100] mx-1">-</span> <span class="font-light text-[#D33100]">Supergasbras</span>
                     </a>
                 </div>
                 <nav class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="#testimonials" class="text-gray-600 hover:text-[#D33100] transition-colors">Depoimentos</a>
-                    <a href="#features" class="text-gray-600 hover:text-[#D33100] transition-colors">Produtos</a>
-                    <a href="#why-choose" class="text-gray-600 hover:text-[#D33100] transition-colors">Sobre nós</a>
-                    <a href="#faq" class="text-gray-600 hover:text-[#D33100] transition-colors">FAQ</a>
+                    <a href="#gas-do-povo" class="text-gray-600 hover:text-[#D33100] transition-colors font-medium">Gás do Povo</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-[#D33100] transition-colors font-medium">Depoimentos</a>
+                    <a href="#features" class="text-gray-600 hover:text-[#D33100] transition-colors font-medium">Produtos</a>
+                    <a href="#order-online" class="bg-orange-50 text-[#D33100] font-semibold px-4 py-2 rounded-full hover:bg-orange-100 transition-all border border-orange-100">Pedido On-line</a>
+                    <a href="#faq" class="text-gray-600 hover:text-[#D33100] transition-colors font-medium">FAQ</a>
                 </nav>
                 <div class="flex items-center">
-                    <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="hidden sm:inline-block bg-[#D33100] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#b82b00] transition-all transform hover:scale-105">
-                        Faça seu pedido
+                    <a href="#order-online" class="hidden sm:inline-block bg-[#D33100] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#b82b00] transition-all transform hover:scale-105">
+                        Fazer Pedido
                     </a>
                     <button id="mobile-menu-button" class="md:hidden ml-4 p-2 text-gray-600 hover:text-gray-900">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -148,34 +158,33 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu --><div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 bg-white">
-            <a href="#testimonials" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2">Depoimentos</a>
-            <a href="#features" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2">Produtos</a>
-            <a href="#why-choose" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2">Sobre nós</a>
-            <a href="#faq" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2">FAQ</a>
-             <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="block w-full text-center bg-[#D33100] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#b82b00] transition-all mt-2">
-                Faça seu pedido
-            </a>
+        <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 bg-white">
+            <a href="#gas-do-povo" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2 font-medium">Gás do Povo</a>
+            <a href="#testimonials" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2 font-medium">Depoimentos</a>
+            <a href="#features" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2 font-medium">Produtos</a>
+            <a href="#order-online" class="block text-[#D33100] font-bold bg-orange-50 px-3 py-2 rounded-lg transition-colors py-2">Pedido On-line</a>
+            <a href="#faq" class="block text-gray-600 hover:text-[#D33100] transition-colors py-2 font-medium">FAQ</a>
         </div>
     </header>
 
     <main>
-        <!-- 1. Hero Section --><section class="hero-gradient pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- 1. Hero Section -->
+        <section class="hero-gradient pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-left" data-aos="fade-right">
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
                             Gás residencial e industrial em Brasília à pronta entrega
                         </h1>
-                        <p class="text-lg md:text-xl text-blue-800 mb-8">
+                        <p class="text-lg md:text-xl text-blue-800 mb-8 font-medium">
                             10.000+ clientes satisfeitos em Brasília e região.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="bg-[#D33100] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#b82b00] transition-all transform hover:scale-105 text-lg">
-                                Encomende agora com desconto
+                            <a href="#order-online" class="bg-[#D33100] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#b82b00] transition-all transform hover:scale-105 text-lg text-center">
+                                Encomende Online
                             </a>
-                            <a href="#features" class="bg-white text-gray-700 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105 text-lg border border-gray-200">
-                                Saber Mais
+                            <a href="https://wa.me/556134562117" target="_blank" class="bg-white text-gray-700 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105 text-lg border border-gray-200 text-center">
+                                Falar com Consultor
                             </a>
                         </div>
                         <p class="mt-8 text-gray-500">
@@ -183,446 +192,405 @@
                         </p>
                     </div>   
                     <div class="relative" data-aos="fade-left" data-aos-delay="200">
-                        <!-- MUDANÇA: Novo DIV wrapper para controlar o tamanho (75% da largura) e centralizar --><div class="w-3/4 mx-auto">
+                        <div class="w-3/4 mx-auto">
                             <div class="aspect-square rounded-2xl shadow-2xl overflow-hidden">
-                                <!-- Container de imagem estática para Swiper Carousel --><div id="hero-image-slider" class="relative w-full h-full hero-swiper-container swiper-container">
+                                <div id="hero-image-slider" class="relative w-full h-full hero-swiper-container swiper-container">
                                     <div class="swiper-wrapper">
-                                        <!-- Slide 1 --><div class="swiper-slide">
+                                        <div class="swiper-slide">
                                             <img src="gas1.webp" alt="Entrega de gás da Líder Gás em Brasília" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+1';">
                                         </div>
-                                        <!-- Slide 2 --><div class="swiper-slide">
-                                            <img src="gas2.webp" alt="Equipe Líder Gás" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+2';">
-                                        </div>
-                                        <!-- Slide 3 --><div class="swiper-slide">
+                                        <div class="swiper-slide">
                                             <img src="gas3.webp" alt="Botijão Supergasbras P13" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+3';">
                                         </div>
-                                        <!-- Slide 4 --><div class="swiper-slide">
-                                            <img src="gas4.webp" alt="Atendimento ao cliente Líder Gás" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+4';">
-                                        </div>
-                                        <!-- Slide 5 --><div class="swiper-slide">
-                                            <img src="gas5.webp" alt="Entrega rápida Riacho Fundo" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+5';">
-                                        </div>
-                                        <!-- Slide 6 --><div class="swiper-slide">
-                                            <img src="gas6.webp" alt="Gás para comércio e indústria" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+6';">
-                                        </div>
-                                        <!-- Slide 7 --><div class="swiper-slide">
-                                            <img src="gas7.webp" alt="Qualidade Supergasbras" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+7';">
-                                        </div>
-                                        <!-- Slide 8 --><div class="swiper-slide">
-                                            <img src="gas8.webp" alt="Líder Gás em Águas Claras" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0D3B66/FFFFFF?text=Imagem+8';">
-                                        </div>
                                     </div>
-                                    <!-- ADIÇÃO: Paginação para o Hero Swiper --><div class="swiper-pagination"></div>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
-                        </div> <!-- Fim do novo DIV wrapper --></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Testimonials Section -->
+        <!-- Seção Gás do Povo -->
+        <section id="gas-do-povo" class="py-20 bg-white overflow-hidden border-b">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 text-center lg:text-left" data-aos="fade-right">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 text-[#D33100] text-sm font-bold uppercase mb-6 tracking-wide border border-orange-200">
+                            Revendedor Autorizado
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                            Programa Gás do Povo: <br><span class="text-[#D33100] italic text-2xl md:text-3xl block mt-2">Troque seu benefício aqui!</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            A Líder Gás é um ponto oficial de troca para o programa **Gás do Povo**. Beneficiários podem retirar seu botijão Supergasbras P13 com total agilidade e segurança.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="https://wa.me/556134562117?text=Quero+pedir+meu+G%C3%A1s+do+Povo" target="_blank" rel="noopener" class="bg-[#D33100] text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#b82b00] transition-all transform hover:scale-105">
+                                Peça aqui seu Gás do Povo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center" data-aos="fade-left">
+                        <div class="relative w-full max-w-[320px] aspect-[9/16] rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-gray-900 bg-black">
+                            <video class="w-full h-full object-cover" autoplay muted playsinline preload="auto" controls>
+                                <source src="gasdopovo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Produtos -->
+        <section id="features" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Produtos</h2>
+                    <p class="mt-4 text-lg text-gray-600 font-medium">Soluções completas para sua residência ou empresa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up">
+                        <img src="p13.webp" alt="Botijão P13" class="w-full rounded-xl object-cover mb-6 aspect-square" onerror="this.onerror=null;this.src='https://placehold.co/400x400?text=Gás+P13';">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P13</h3>
+                        <p class="text-gray-600 mb-6">O botijão tradicional de 13kg. Ideal para fogões e fornos domésticos.</p>
+                        <a href="#order-online" class="text-[#D33100] font-semibold hover:underline">Comprar Agora &rarr;</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                         <img src="p20.webp" alt="Botijão P20" class="w-full rounded-xl object-cover mb-6 aspect-square" onerror="this.onerror=null;this.src='https://placehold.co/400x400?text=Gás+P20';">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P20</h3>
+                        <p class="text-gray-600 mb-6">Uso específico para empilhadeiras. Mais autonomia para sua indústria.</p>
+                         <a href="https://wa.me/556134562117" target="_blank" class="text-[#D33100] font-semibold hover:underline">Consultar Preço &rarr;</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                        <img src="p45.webp" alt="Botijão P45" class="w-full rounded-xl object-cover mb-6 aspect-square" onerror="this.onerror=null;this.src='https://placehold.co/400x400?text=Gás+P45';">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P45</h3>
+                        <p class="text-gray-600 mb-6">Para condomínios, bares e restaurantes com alto volume de consumo.</p>
+                         <a href="https://wa.me/556134562117" target="_blank" class="text-[#D33100] font-semibold hover:underline">Solicitar Orçamento &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Pedido On-line -->
+        <section id="order-online" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-5xl mx-auto bg-gray-50 rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
+                    <div class="grid grid-cols-1 lg:grid-cols-5">
+                        <!-- Parte 1: Escolha de Produtos -->
+                        <div class="lg:col-span-2 bg-[#D33100] p-10 text-white">
+                            <h2 class="text-3xl font-extrabold mb-4 italic text-center lg:text-left">Carrinho Rápido</h2>
+                            <p class="mb-10 text-orange-100 text-center lg:text-left">Escolha o que deseja pedir e preencha os dados ao lado.</p>
+                            
+                            <div class="space-y-8">
+                                <!-- Produto: Gás P13 -->
+                                <div class="flex items-center justify-between bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/20">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="p13.webp" alt="P13" class="w-8 h-auto" onerror="this.src='https://placehold.co/50x50?text=P13'">
+                                        </div>
+                                        <div>
+                                            <p class="font-bold">Botijão P13</p>
+                                            <p class="text-xs text-orange-200">Tradicional</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 bg-white/20 rounded-xl p-1">
+                                        <button onclick="decrement('qnt-gas')" class="w-8 h-8 flex items-center justify-center hover:bg-white/20 rounded-lg font-bold">-</button>
+                                        <input type="number" id="qnt-gas" value="1" min="0" class="w-10 bg-transparent text-center font-extrabold text-lg focus:outline-none">
+                                        <button onclick="increment('qnt-gas')" class="w-8 h-8 flex items-center justify-center hover:bg-white/20 rounded-lg font-bold">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Produto: Água -->
+                                <div class="flex items-center justify-between bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/20">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                                            <span class="text-2xl">💧</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold">Água 20L</p>
+                                            <p class="text-xs text-orange-200">Galão 20 litros</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 bg-white/20 rounded-xl p-1">
+                                        <button onclick="decrement('qnt-agua')" class="w-8 h-8 flex items-center justify-center hover:bg-white/20 rounded-lg font-bold">-</button>
+                                        <input type="number" id="qnt-agua" value="0" min="0" class="w-10 bg-transparent text-center font-extrabold text-lg focus:outline-none">
+                                        <button onclick="increment('qnt-agua')" class="w-8 h-8 flex items-center justify-center hover:bg-white/20 rounded-lg font-bold">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parte 2: Formulário -->
+                        <div class="lg:col-span-3 p-10 bg-white">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <svg class="w-6 h-6 text-[#D33100]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Dados para Entrega
+                            </h3>
+                            
+                            <form id="form-pedido" onsubmit="enviarPedido(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Seu Nome</label>
+                                        <input type="text" id="nome" required placeholder="Ex: João Silva" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D33100] outline-none transition-all">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">WhatsApp</label>
+                                        <input type="tel" id="tel" required placeholder="(61) 99999-9999" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D33100] outline-none transition-all">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Selecione seu Bairro</label>
+                                    <select id="bairro" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D33100] outline-none transition-all">
+                                        <option value="" disabled selected>Escolha o bairro...</option>
+                                        <option value="Águas Claras">Águas Claras</option>
+                                        <option value="Arniqueira">Arniqueira</option>
+                                        <option value="Areal">Areal</option>
+                                        <option value="Riacho Fundo I">Riacho Fundo I</option>
+                                        <option value="Riacho Fundo II">Riacho Fundo II</option>
+                                        <option value="Núcleo Bandeirante">Núcleo Bandeirante</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Endereço Completo</label>
+                                    <input type="text" id="endereco" required placeholder="Rua, Quadra, Lote, Complemento..." class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D33100] outline-none transition-all">
+                                </div>
+
+                                <!-- MUDANÇA: Escolha da Forma de Pagamento (Botões em vez de Select) -->
+                                <div class="space-y-2 pb-4">
+                                    <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Forma de Pagamento (No ato da entrega)</label>
+                                    <div class="grid grid-cols-2 gap-2" id="payment-options">
+                                        <button type="button" onclick="selectPayment('Pix', this)" class="payment-btn p-3 border rounded-xl text-sm font-medium transition-all border-gray-200 bg-gray-50 text-gray-700 hover:border-orange-300 active font-bold border-[#D33100] bg-orange-50 text-[#D33100]">Pix</button>
+                                        <button type="button" onclick="selectPayment('Cartão de Crédito', this)" class="payment-btn p-3 border rounded-xl text-sm font-medium transition-all border-gray-200 bg-gray-50 text-gray-700 hover:border-orange-300">Crédito</button>
+                                        <button type="button" onclick="selectPayment('Cartão de Débito', this)" class="payment-btn p-3 border rounded-xl text-sm font-medium transition-all border-gray-200 bg-gray-50 text-gray-700 hover:border-orange-300">Débito</button>
+                                        <button type="button" onclick="selectPayment('Dinheiro', this)" class="payment-btn p-3 border rounded-xl text-sm font-medium transition-all border-gray-200 bg-gray-50 text-gray-700 hover:border-orange-300">Dinheiro</button>
+                                    </div>
+                                    <!-- Input oculto para armazenar a escolha -->
+                                    <input type="hidden" id="pagamento" value="Pix">
+                                </div>
+
+                                <button type="submit" id="btn-submit-order" class="w-full bg-[#D33100] hover:bg-[#b82b00] text-white font-extrabold py-4 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-3 text-lg relative overflow-hidden group">
+                                    <span id="btn-text" class="flex items-center gap-2">
+                                        Confirmar Pedido no WhatsApp
+                                    </span>
+                                    <span id="btn-spinner" class="hidden">
+                                        <svg class="w-5 h-5 spinner" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v2m0 12v2m8-8h-2M6 12H4m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636"></path></svg>
+                                    </span>
+                                </button>
+                                <p class="text-center text-xs text-gray-400 mt-4 font-medium uppercase tracking-widest italic">Processamento expresso via WhatsApp</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Depoimentos -->
         <section class="py-20 bg-gray-50" id="testimonials">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">O que nossos clientes dizem</h2>
-                    <p class="mt-4 text-lg text-gray-600">A satisfação de quem confia em nosso trabalho.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 italic">O que nossos clientes dizem</h2>
+                    <p class="mt-4 text-lg text-gray-600 font-medium">A satisfação de quem confia em nosso trabalho.</p>
                 </div>
-                <!-- Swiper.js Carousel -->
                 <div class="swiper-container testimonial-slider" data-aos="fade-up">
                     <div class="swiper-wrapper">
-                        <!-- Testimonial 1 -->
                         <div class="swiper-slide testimonial-slide p-2">
                             <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
                                 <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=LS" alt="Avatar de Lucas Sousa" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=LS';">
+                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=LS" alt="Avatar">
                                     <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
+                                        <div class="text-yellow-500 flex font-bold">★★★★★</div>
                                     </div>
                                 </div>
                                 <blockquote class="text-gray-600 italic flex-grow">"A melhor de Brasília, ótimo preço e atendimento top!"</blockquote>
                                 <cite class="mt-4 font-semibold text-gray-900 not-italic">- Lucas Sousa</cite>
                             </div>
                         </div>
-                        <!-- Testimonial 2 -->
                         <div class="swiper-slide testimonial-slide p-2">
                             <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
                                 <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=RS" alt="Avatar de Rayane Santos" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=RS';">
+                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=RS" alt="Avatar">
                                     <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
+                                        <div class="text-yellow-500 flex font-bold">★★★★★</div>
                                     </div>
                                 </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Ótimo atendimento e super atenciosos. Foram super atenciosos, me trazendo o gás em 20 minutos! Amei."</blockquote>
+                                <blockquote class="text-gray-600 italic flex-grow">"Ótimo atendimento e super atenciosos. Foram super atenciosos, me trazendo o gás em 20 minutos!"</blockquote>
                                 <cite class="mt-4 font-semibold text-gray-900 not-italic">- Rayane Santos</cite>
                             </div>
                         </div>
-                        <!-- Testimonial 3 -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=MM" alt="Avatar de Matheus Martins" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=MM';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Atendimento especializado, entrega rápida, suporte ao cliente de qualidade, recomendo a todos!"</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Matheus Martins</cite>
-                            </div>
-                        </div>
-                        <!-- Testimonial 4 (Novo) -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=DO" alt="Avatar de Delainy Oliveira" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=DO';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Excelente atendimento! O Ailton é super atencioso, entrega rápida e com muito profissionalismo. Além disso, o gás é de ótima qualidade e confiável. Recomendo de olhos fechados!"</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Delainy Oliveira</cite>
-                            </div>
-                        </div>
-                        <!-- Testimonial 5 (Novo) -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=DA" alt="Avatar de Dayse Arcanjo" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=DA';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Atendimento e entrega super rápidos. Melhor preço da região!!"</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Dayse Arcanjo</cite>
-                            </div>
-                        </div>
-                        <!-- Testimonial 6 (Novo) -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=MD" alt="Avatar de Maria da Guia" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=MD';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Wemerson fez um ótimo atendimento e entrega super rápida, não é à toa que sempre pego com vcs."</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Maria da Guia</cite>
-                            </div>
-                        </div>
-                        <!-- Testimonial 7 (Novo) -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=RS" alt="Avatar de Rosiane Soares" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=RS';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Sou cliente a um tempo, gosto do atendimento, da agilidade e preço super recomendo."</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Rosiane Soares</cite>
-                            </div>
-                        </div>
-                        <!-- Testimonial 8 (Novo) -->
-                        <div class="swiper-slide testimonial-slide p-2">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col w-full">
-                                <div class="flex items-center mb-4">
-                                    <!-- SEO: Lazy Loading -->
-                                    <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=AA" alt="Avatar de Amanda Alves" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=AA';">
-                                    <div class="flex-1">
-                                        <div class="text-yellow-500 flex">★★★★★</div>
-                                    </div>
-                                </div>
-                                <blockquote class="text-gray-600 italic flex-grow">"Só faço pedido na Líder Gás, atendimento eficiente e de qualidade, os produtos são bons e o atendimento é diferenciado!"</blockquote>
-                                <cite class="mt-4 font-semibold text-gray-900 not-italic">- Amanda Alves</cite>
-                            </div>
-                        </div>
                     </div>
-                    <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
-      
-        <!-- 3. Features Section --><section id="features" class="py-20 bg-gray-50">
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Produtos</h2>
-                    <p class="mt-4 text-lg text-gray-600">Soluções completas em gás GLP para sua casa ou negócio.</p>
-                </div>
-
-                <!-- MUDANÇA: O 'space-y-8' foi substituído por um grid de 3 colunas (md:grid-cols-3) para padronizar os cards --><div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Card P13 (Agora vertical e parte do grid) --><div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="0">
-                        <!-- SEO: Lazy Loading --><!-- MUDANÇA: Classes da imagem P13 padronizadas (w-full aspect-square) --><img src="p13.webp" alt="Botijão de Gás GLP P13" class="w-full rounded-xl object-cover mb-6 aspect-square" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/400x300/0D3B66/FFFFFF?text=Gás+P13';">
-                        <div class="">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P13</h3>
-                            <p class="text-gray-600 mb-6">O tradicional gás de cozinha, ideal para residências. Seguro, econômico e com a qualidade Supergasbras que você confia.</p>
-                            <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="text-[#D33100] font-semibold hover:underline">Peça agora &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Card P20 (Agora parte do grid md:grid-cols-3) --><div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                         <!-- SEO: Lazy Loading --><img src="p20.webp" alt="Botijão de Gás GLP P20" class="w-full rounded-xl object-cover mb-6 aspect-square" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/400x250/0D3B66/FFFFFF?text=Gás+P20';">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P20</h3>
-                        <p class="text-gray-600 mb-6">Perfeito para empilhadeiras, garantindo maior autonomia e eficiência para a sua operação logística.</p>
-                         <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="text-[#D33100] font-semibold hover:underline">Saiba mais &rarr;</a>
-                    </div>
-                    
-                    <!-- Card P45 (Agora parte do grid md:grid-cols-3) --><div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                        <!-- SEO: Lazy Loading --><img src="p45.webp" alt="Botijão de Gás GLP P45" class="w-full rounded-xl object-cover mb-6 aspect-square" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/400x250/0D3B66/FFFFFF?text=Gás+P45';">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Gás GLP P45</h3>
-                        <p class="text-gray-600 mb-6">A solução para comércios e indústrias com alto consumo, como restaurantes e padarias. Mais potência e durabilidade.</p>
-                         <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="text-[#D33100] font-semibold hover:underline">Consulte &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. "Why Choose" Section --><!-- MUDANÇA: A classe 'bg-white' foi substituída por 'hero-gradient' --><section id="why-choose" class="hero-gradient py-20">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Por que escolher a Líder Gás?</h2>
-                    <p class="mt-4 text-lg text-gray-600">Compromisso e qualidade em cada entrega.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Pillar 1 --><div class="text-center p-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-800 mx-auto mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Entrega Rápida</h3>
-                        <p class="text-gray-600">Seu gás chega em tempo recorde, onde você estiver.</p>
-                    </div>
-                    <!-- Pillar 2 --><div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-800 mx-auto mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Procedência Supergasbras</h3>
-                        <p class="text-gray-600">Qualidade e confiança da marca líder de mercado.</p>
-                    </div>
-                    <!-- Pillar 3 --><div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-800 mx-auto mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Protocolos de Segurança</h3>
-                        <p class="text-gray-600">Seguimos rigorosos padrões para sua tranquilidade.</p>
-                    </div>
-                    <!-- Pillar 4 --><div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-800 mx-auto mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">10 Anos de Experiência</h3>
-                        <p class="text-gray-600">Uma década de serviços prestados com excelência.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. FAQ Section --><section id="faq" class="py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Perguntas Frequentes</h2>
-                        <p class="mt-4 text-lg text-gray-600">Tire suas dúvidas sobre nossos serviços.</p>
-                    </div>
-                    <div class="space-y-4" data-aos="fade-up">
-                        <!-- FAQ Item 1 --><!-- MUDANÇA: O atributo 'open' foi removido daqui --><details class="faq-item group bg-gray-50 p-6 rounded-lg">
-                            <summary class="flex items-center justify-between cursor-pointer">
-                                <h3 class="text-lg font-semibold text-gray-900">Onde entregam?</h3>
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12">Dúvidas Frequentes</h2>
+                    <div class="space-y-4">
+                        <details class="faq-item group bg-gray-50 p-6 rounded-lg text-left border">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold">
+                                Onde entregam?
                                 <span class="faq-arrow text-gray-500 transform transition-transform duration-300">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                                 </span>
                             </summary>
-                            <p class="mt-4 text-gray-600">Entregamos em Taguatinga Sul e Norte, Vicente Pires, Areal, Riacho Fundo e Águas Claras.</p>
+                            <p class="mt-4 text-gray-600">Águas Claras, Arniqueira, Areal, Riacho Fundo I e II, e Núcleo Bandeirante.</p>
                         </details>
-                        <!-- FAQ Item 2 --><details class="faq-item group bg-gray-50 p-6 rounded-lg">
-                            <summary class="flex items-center justify-between cursor-pointer">
-                                <h3 class="text-lg font-semibold text-gray-900">Qual o prazo para entrega do gás de cozinha?</h3>
-                                <span class="faq-arrow text-gray-500 transform transition-transform duration-300">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </span>
-                            </summary>
-                            <p class="mt-4 text-gray-600">Nosso compromisso é entregar em até 1 hora após a confirmação do seu pedido.</p>
-                        </details>
-                        <!-- FAQ Item 3 --><details class="faq-item group bg-gray-50 p-6 rounded-lg">
-                            <summary class="flex items-center justify-between cursor-pointer">
-                                <h3 class="text-lg font-semibold text-gray-900">Vocês entregam no fim de semana?</h3>
-                                <span class="faq-arrow text-gray-500 transform transition-transform duration-300">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </span>
-                            </summary>
-                            <p class="mt-4 text-gray-600">Sim, fazemos entregas de segunda-feira a sábado, para sua maior comodidade.</p>
-                        </details>
-                        <!-- FAQ Item 4 - SEO Local --><details class="faq-item group bg-gray-50 p-6 rounded-lg">
-                            <summary class="flex items-center justify-between cursor-pointer">
-                                <h3 class="text-lg font-semibold text-gray-900">Qual o endereço da Líder Gás?</h3>
-                                <span class="faq-arrow text-gray-500 transform transition-transform duration-300">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </span>
-                            </summary>
-                            <p class="mt-4 text-gray-600">Nossa unidade principal está localizada em Riacho Fundo II - 1A Etapa QN 7D CONJUNTO 4 LOTE 08 - Riacho Fundo II, Brasília - DF, 71880-044. Mas não se preocupe, entregamos rapidamente em toda a sua região!</p>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Final CTA --><section id="final-cta" class="cta-gradient text-white py-20 overflow-hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left" data-aos="fade-right">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Garanta já o seu gás no melhor preço</h2>
-                        <p class="text-lg opacity-90 mb-8">Peça agora pelo WhatsApp ou baixe nosso app para descontos exclusivos.</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" target="_blank" rel="noopener" class="bg-white text-[#D33100] font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105 text-lg">
-                                Pedir no WhatsApp
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.supergasbras.app&pcampaignid=web_share" target="_blank" rel="noopener" class="bg-[#D33100] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#b82b00] transition-all transform hover:scale-105 text-lg">
-                                Baixar o App
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex justify-center" data-aos="fade-left" data-aos-delay="200">
-                        <!-- SEO: Lazy Loading --><img src="app.webp" alt="Mockup do aplicativo Líder Gás" class="w-auto h-96 rounded-2xl shadow-2xl transform md:rotate-6" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 7. Footer --><footer class="bg-gray-900 text-gray-400">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!-- MUDANÇA: 'md:text-left' removido. 'text-center' agora se aplica a todos os tamanhos --><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <!-- MUDANÇA: 'md:mb-0' alterado para 'sm:mb-0' --><div class="mb-6 sm:mb-0">
-                    <h4 class="text-lg font-semibold text-white mb-3">Líder Gás - Supergasbras</h4>
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 text-center sm:text-left">
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3 italic tracking-wide">Líder Gás</h4>
                     <p>&copy; 2025 Todos os direitos reservados.</p>
                 </div>
-                
-                <!-- Coluna Endereço 1 --><!-- MUDANÇA: 'md:mb-0' alterado para 'sm:mb-0' --><div class="mb-6 sm:mb-0">
-                    <h4 class="text-lg font-semibold text-white mb-3">Unidade Riacho Fundo II</h4>
-                    <!-- Endereço 1 --><a href="https://maps.app.goo.gl/5R1T2TsYvGJ2XEWb9" target="_blank" rel="noopener" class="inline-block transition-colors hover:text-white">
-                        <p>Riacho Fundo II - 1A Etapa</p>
-                        <p>QN 7D CONJUNTO 4 LOTE 08</p>
-                        <p>Brasília - DF, 71880-044</p>
-                    </a>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Unidade 1</h4>
+                    <p>Riacho Fundo II</p>
                 </div>
-                
-                <!-- Coluna Endereço 2 --><!-- MUDANÇA: 'md:mb-0' alterado para 'sm:mb-0' --><div class="mb-6 sm:mb-0">
-                     <h4 class="text-lg font-semibold text-white mb-3">Unidade Águas Claras</h4>
-                    <!-- Endereço 2 --><a href="https://maps.app.goo.gl/tuRsNYmh8XUKms618" target="_blank" rel="noopener" class="inline-block transition-colors hover:text-white">
-                        <p>ADE Águas Claras 10/12</p>
-                        <p>Areal, Brasília - DF, 71987-720</p>
-                    </a>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Unidade 2</h4>
+                    <p>ADE Águas Claras</p>
                 </div>
-
-                <!-- MUDANÇA: 'lg:text-right' removido. 'md:mb-0' alterado para 'sm:mb-0' --><div class="mb-6 sm:mb-0">
+                <div>
                     <h4 class="text-lg font-semibold text-white mb-3">Siga-nos</h4>
-                    <!-- MUDANÇA: 'md:justify-start lg:justify-end' removido. 'justify-center' agora se aplica --><div class="flex space-x-4 justify-center">
-                        <a href="https://www.instagram.com/lsgas22/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Instagram</a>
-                        <!-- Link do Facebook removido -->
+                    <div class="flex space-x-4 justify-center sm:justify-start">
+                        <a href="https://www.instagram.com/lsgas22/" target="_blank" class="hover:text-white transition-colors">Instagram</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Desenvolvido por --><div class="border-t border-gray-700 py-4">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-center items-center text-sm">
-                    <!-- MUDANÇA: Cor do texto alterada (agora com CSS inline) --><span style="color: #D33100;">Desenvolvido por</span>
-                    <!-- MUDANÇA: Link do WhatsApp adicionado --><a href="https://wa.me/5561991390058?text=Ol%C3%A1,+vi+que+desenvolvem+sites.+Podem+me+ajudar?+" target="_blank" rel="noopener" class="ml-2">
-                         <!-- SEO: Lazy Loading --><!-- CORREÇÃO: Erro de digitação 'httpsG' corrigido para 'https' --><img src="logoE.webp" alt="Logo Desenvolvedor" class="h-6 w-auto" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/100x24/4A5568/FFFFFF?text=LogoE';">
-                    </a>
-                </div>
+            <div class="border-t border-gray-800 pt-8 flex justify-center items-center text-sm">
+                <span class="text-[#D33100] mr-2 font-medium">Desenvolvido por</span>
+                <img src="logoE.webp" alt="Dev" class="h-6 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/80x20/4A5568/FFFFFF?text=Dev';">
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Swiper.js JS --><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50,
-        });
+        AOS.init({ duration: 800, once: true });
 
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.onclick = () => mobileMenu.classList.toggle('hidden');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        // Lógica do Pedido Online
+        function increment(id) {
+            const input = document.getElementById(id);
+            input.value = parseInt(input.value) + 1;
+        }
+        function decrement(id) {
+            const input = document.getElementById(id);
+            if (parseInt(input.value) > 0) input.value = parseInt(input.value) - 1;
+        }
+
+        // Função para selecionar forma de pagamento
+        function selectPayment(value, btn) {
+            document.getElementById('pagamento').value = value;
+            // Remover estado ativo de todos os botões
+            document.querySelectorAll('.payment-btn').forEach(b => {
+                b.classList.remove('active', 'font-bold', 'border-[#D33100]', 'bg-orange-50', 'text-[#D33100]');
+                b.classList.add('bg-gray-50', 'border-gray-200', 'text-gray-700');
             });
-        });
+            // Adicionar estado ativo ao botão clicado
+            btn.classList.add('active', 'font-bold', 'border-[#D33100]', 'bg-orange-50', 'text-[#D33100]');
+            btn.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-700');
+        }
 
-        // Swiper Initialization
-        var swiperTestimonials = new Swiper('.testimonial-slider', { // Renomeado para clareza
-            /* loop: true, */ /* Removido para funcionar com slidesPerGroup */
-            rewind: true, // Faz o carrossel reiniciar no 'autoplay'
-            slidesPerView: 1, // Default: 1 slide no mobile
+        function enviarPedido(event) {
+            event.preventDefault();
+            
+            const btn = document.getElementById('btn-submit-order');
+            const btnText = document.getElementById('btn-text');
+            const btnSpinner = document.getElementById('btn-spinner');
+            
+            const gas = document.getElementById('qnt-gas').value;
+            const agua = document.getElementById('qnt-agua').value;
+            const nome = document.getElementById('nome').value;
+            const tel = document.getElementById('tel').value;
+            const bairro = document.getElementById('bairro').value;
+            const endereco = document.getElementById('endereco').value;
+            const pagamento = document.getElementById('pagamento').value;
+
+            if(gas == 0 && agua == 0) {
+                alert("Por favor, selecione pelo menos 1 produto.");
+                return;
+            }
+
+            // Iniciar animação no botão
+            btn.classList.add('btn-loading');
+            btnText.innerText = "Processando pedido...";
+            btnSpinner.classList.remove('hidden');
+
+            let itens = "";
+            if(gas > 0) itens += `- ${gas} Botijão(ões) de Gás P13\n`;
+            if(agua > 0) itens += `- ${agua} Galão(ões) de Água 20L\n`;
+
+            const mensagem = `*NOVO PEDIDO ONLINE (LÍDER GÁS)*\n\n` +
+                             `*PRODUTOS:*\n${itens}\n` +
+                             `*DADOS DO CLIENTE:*\n` +
+                             `• Nome: ${nome}\n` +
+                             `• Telefone: ${tel}\n` +
+                             `• Bairro: ${bairro}\n` +
+                             `• Endereço: ${endereco}\n\n` +
+                             `*PAGAMENTO:* ${pagamento}\n\n` +
+                             `_Pagar no ato da entrega._`;
+
+            const phone = "556134562117";
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`;
+            
+            // Simular tempo de processamento
+            setTimeout(() => {
+                btn.classList.remove('bg-[#D33100]');
+                btn.classList.add('bg-green-600');
+                btnSpinner.classList.add('hidden');
+                btnText.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Pedido Enviado! Abrindo WhatsApp...`;
+                
+                // Redirecionamento
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 1500);
+            }, 2000);
+        }
+
+        var swiperTestimonials = new Swiper('.testimonial-slider', {
+            rewind: true,
+            slidesPerView: 1,
             spaceBetween: 16,
-            slidesPerGroup: 1, // Default: agrupa de 1 em 1 no mobile
-            pagination: {
-                el: '.testimonial-slider .swiper-pagination', // CORREÇÃO: Seletor específico
-                clickable: true,
-            },
-            autoplay: {
-                delay: 8000,
-                disableOnInteraction: false,
-            },
+            pagination: { el: '.testimonial-slider .swiper-pagination', clickable: true },
+            autoplay: { delay: 8000 },
             breakpoints: {
-                // when window width is >= 768px
-                768: {
-                    slidesPerView: 2, // 2 slides no tablet
-                    spaceBetween: 24,
-                    slidesPerGroup: 2 // Agrupa de 2 em 2 no tablet
-                },
-                // when window width is >= 1024px
-                1024: {
-                    slidesPerView: 2, // 2 slides no desktop
-                    spaceBetween: 32,
-                    slidesPerGroup: 2 // Agrupa de 2 em 2 no desktop
-                }
+                768: { slidesPerView: 2, slidesPerGroup: 2 }
             }
         });
 
-        // ADIÇÃO: Swiper Initialization (Hero)
         var swiperHero = new Swiper('.hero-swiper-container', {
             loop: true,
-            slidesPerView: 1,
-            effect: 'fade', // Efeito de fade
-            fadeEffect: {
-                crossFade: true
-            },
-            autoplay: {
-                delay: 5000, // 5 segundos
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.hero-swiper-container .swiper-pagination', // Seletor específico
-                clickable: true,
-            },
+            effect: 'fade',
+            autoplay: { delay: 5000 },
+            pagination: { el: '.hero-swiper-container .swiper-pagination', clickable: true },
         });
-
-        // Lógica do Hero Image Slider foi removida
-
     </script>
 
-    <!-- Botão Flutuante do WhatsApp --><!-- MUDANÇA: O SVG interno foi substituído pelo SVG que você forneceu. As classes de tamanho (w-16 h-16) foram movidas para o link <a> e o padding (p-3) foi adicionado para controlar o tamanho do ícone. --><a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" 
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/556134562117?text=Ol%C3%A1,+vim+do+Site.+Podem+me+ajudar?" 
        target="_blank" 
        rel="noopener" 
        aria-label="Contactar via WhatsApp"
        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-16 h-16 p-3 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all transform">
-        <!-- SVG que você forneceu --><svg viewBox="0 0 24 24" class="w-full h-full" fill="currentColor">
+        <svg viewBox="0 0 24 24" class="w-full h-full" fill="currentColor">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.296-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
         </svg>
     </a>
